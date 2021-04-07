@@ -70,32 +70,6 @@ driver.findElement(By.xpath(login)).click();
 System.out.println("Clicked on Login");
 Thread.sleep(3000);
 
-//Click on group
-String group = "//span[normalize-space()='Group']";
-driver.findElement(By.xpath(group)).click();
-System.out.println("Clicked on group");
-Thread.sleep(3000);
-
-//Click on group listing
-String grouplisting= "//a[contains(text(),'Group Listing')]";
-driver.findElement(By.xpath(grouplisting )).click();
-System.out.println("Clicked on group listing");
-Thread.sleep(3000);
-
-//Click on search
-String search1 = "//input[@type='search']";
-driver.findElement(By.xpath(search1)).click();
-System.out.println("Clicked on search1");
-Thread.sleep(3000);
-
-//Adding data in search box
-String search2="//input[@type='search']";
-driver.findElement(By.xpath(search2)).sendKeys("let me finish");
-System.out.println("Clicked on search");
-Thread.sleep(3000);
-
-
-
 //Click on companies
 String companies = "//span[normalize-space()='Companies']";
 driver.findElement(By.xpath(companies)).click();
@@ -118,14 +92,9 @@ Thread.sleep(3000);
 String search3="//input[@type='search']";
 driver.findElement(By.xpath(search3)).sendKeys("Ibm");
 System.out.println("Clicked on search");
-Thread.sleep(3000);
+Thread.sleep(5000);
 
-//Click on dashboard
-String dashboard = "//span[normalize-space()='Dashboard']";
-driver.findElement(By.xpath(dashboard)).click();
-System.out.println("Clicked on dashboard");
-Thread.sleep(3000);
- 
+
 //Click on membership plan
 String membership = "//a[normalize-space()='Membership Plan']";
 driver.findElement(By.xpath(membership)).click();
@@ -164,21 +133,12 @@ Thread.sleep(3000);
 
 //Select a profile view check
 WebElement dropDown1=driver.findElement(By.xpath("//select[@id='profile_view_check']"));
-//dropDown1.click();
 Select item1=new Select(dropDown1);
-item1.selectByValue("yes");
+item1.selectByValue("1");
 driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 System.out.println("You selected dropdown value");
 Thread.sleep(3000);
 
-//Select status
-WebElement dropDown2=driver.findElement(By.xpath("//select[@id='status']"));
-//dropDown1.click();
-Select item2=new Select(dropDown2);
-item2.selectByValue("yes");
-driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
-System.out.println("You selected dropdown value");
-Thread.sleep(3000);
 
 //Click on add button
 String add="//input[@name='submit']";
@@ -190,5 +150,7 @@ Thread.sleep(5000);
 String logout="//a[contains(text(),'Logout')]";
 driver.findElement(By.xpath(logout)).click();
 Thread.sleep(3000);	
+
+driver.close();
 	}
 }
