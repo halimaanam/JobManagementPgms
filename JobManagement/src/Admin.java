@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-public class AdminSearchCompanies {
+public class Admin {
 	@Test
 
 public  void addcompany() throws IOException, InterruptedException {
